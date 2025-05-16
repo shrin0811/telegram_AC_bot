@@ -12,9 +12,10 @@ logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
 # Google Sheets Configuration
 SCOPE = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
-CREDS_FILE = "C:/Users/SHRINJANA/Downloads/test_tele_bot/telegrambottest-443210-ffb3f27308b5.json"  
+CREDS_FILE = "Insert_path_for_credentials.json_file"  
 # This .json file will contain your private API key from Google Drive to connect it with your code, to remotely access the sheets, and log the progress there. 
-SPREADSHEET_NAME = "tele_test_2"  # Replace with your Google Sheet's name
+SPREADSHEET_NAME = "insert_the_name_of_your_desired_connected_spreadsheet"  
+#Make sure that this sheet is connected to the private email-id that you will find in your credentials file. 
 
 # Initialize Google Sheets API
 credentials = ServiceAccountCredentials.from_json_keyfile_name(CREDS_FILE, SCOPE)
@@ -116,8 +117,7 @@ async def start(update: Update, context: CallbackContext) -> None:
 
 # Main function to run the bot
 def main():
-    # Replace this with your actual bot token
-    TELEGRAM_TOKEN = "8060386574:AAGw17qVjin6WtuUpjO_A4uTS9dkD3mKC0k"
+    TELEGRAM_TOKEN = "Replace_this_with_actual_token_generated_in_Telegram"
 
     # Create the application
     application = Application.builder().token(TELEGRAM_TOKEN).build()

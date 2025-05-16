@@ -1,7 +1,7 @@
 # telegram_AC_bot
-This Telegram bot was made independently by me to log questions for AstroChallenge 2025. It's an imperfect bot. What it does is --> once the script is started, there is an inbuilt logic that allows it to detect questions, and categorize them according to the needs of AstroChallenge and its specific rounds for the Finals. 
+This Telegram bot was made independently by me to log questions for [AstroChallenge 2025](https://www.astrochallenge.org/). It's an imperfect bot. What it does is --> once the script is started, there is an inbuilt logic that allows it to detect questions, and categorize them according to the needs of AstroChallenge and its specific rounds for the Finals. 
 
-## How did I step aside the issue of paying for to launch it forever on a server? 
+## How did I side-step the issue of paying for to launch it forever on a server? 
 I realised that QMs will not be continuously posting questions, so it would be very expensive for us as an organization to launch it on a server, and pay for that. Instead, this bot 'logs' messages from the last time that it was started manually by me, and only pushes the relevant ones to the linked Google sheet. 
 
 ## The privacy aspect
