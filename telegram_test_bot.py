@@ -21,7 +21,7 @@ credentials = ServiceAccountCredentials.from_json_keyfile_name(CREDS_FILE, SCOPE
 gc = gspread.authorize(credentials)
 sheet = gc.open(SPREADSHEET_NAME).sheet1  # Use the first sheet
 
-generic_astro_words= ['sun', 'mercury', 'venus', 'earth', 'moon', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'belt', 
+generic_astro_words= ['sun', 'solar', 'system', 'alpha', 'pleaides', 'mercury', 'venus', 'earth', 'moon', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'belt', 
                       'sky', 'summer', 'winter', 'spring', 'autumn', 'north', 'east', 'south', 'west', 'northern', 'southern', 'eastern', 'western', 'asterism', 
                       'constellation', 'star', 'planet', 'asteroid', 'galaxy', 'galaxies', 'cluster', 'year', 'gap', 'opposition', 'retrograde']
 
@@ -38,7 +38,7 @@ def categorize(text: str) -> str:
         return 'Estimation - R0'
     elif 'theory jeopardy' in text.lower():
         return 'Theory Jeopardy - R1'
-    elif any(word in text.lower() for word in ['observation jeopardy', 'obs jeopardy', 'observation']):
+    elif any(word in text.lower() for word in ['observation jeopardy', 'obs jeopardy', 'observation', 'obs', 'Obs']):
         return 'Obs Jeopardy - R1'
     elif 'jeopardy' in text.lower():
         return 'Jeopardy - R1'
